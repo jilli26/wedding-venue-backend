@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  venue_id: 1
+  start: 2017-11-01 11:52:56
+  end: 2017-11-01 11:52:56
+  booker_name: MyString
+
+two:
+  user_id: 1
+  venue_id: 1
+  start: 2017-11-01 11:52:56
+  end: 2017-11-01 11:52:56
+  booker_name: MyString

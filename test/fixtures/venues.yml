@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  location: MyString
+  description: MyString
+  photo: MyString
+  pricing: 1
+  capacity: 1
+  amenities: MyString
+  availability: MyString
+  category: MyString
+  size: 1
+  cancellation: MyString
+  security_deposit: MyString
+  accessibility: MyString
+
+two:
+  title: MyString
+  location: MyString
+  description: MyString
+  photo: MyString
+  pricing: 1
+  capacity: 1
+  amenities: MyString
+  availability: MyString
+  category: MyString
+  size: 1
+  cancellation: MyString
+  security_deposit: MyString
+  accessibility: MyString

@@ -1,0 +1,25 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+fiona = Vendor.create(name: 'Fiona', username: 'fiona19', email: 'fiona19@gmail.com')
+sam = Vendor.create(name: 'Sam', username: 'sammy23', email: 'sammy23@gmail.com')
+chris = Vendor.create(name: 'Chris', username: 'chris123', email: 'chris123@gmail.com')
+tom = Vendor.create(name: 'Thomas', username: 'tommy', email: 'tommy@me.com')
+leanne = Vendor.create(name: 'Leanne', username: 'leanne', email: 'leanney@me.com')
+
+garden = Venue.create(vendor_id: 1, title: 'Serene Garden', location: 'Hudson Valley, NY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus viverra vitae congue eu consequat ac felis. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Eget egestas purus viverra accumsan. Senectus et netus et malesuada. Aenean et tortor at risus viverra. ', photo: '', pricing: 200, capacity: 100, amenities: '', availability: '', category: 'Garden', size: 2000, cancellation: '', security_deposit: '', accessibility: '')
+
+rooftop = Venue.create(vendor_id: 2, title: 'Modern Hotel Rooftop', location: 'Midtown Manhattan, NY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam sem et tortor consequat. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Ipsum a arcu cursus vitae congue. ', photo: '', pricing: 400, capacity: 250, amenities: '', availability: '', category: 'Hotel', size: 1800, cancellation: '', security_deposit: '', accessibility: '')
+
+mansion = Venue.create(vendor_id: 3, title: 'Opulent Mansion', location: 'Long Island, NY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut consequat semper viverra nam libero. Magna eget est lorem ipsum dolor sit amet. In fermentum posuere urna nec tincidunt praesent semper feugiat. Velit ut tortor pretium viverra. Aliquet bibendum enim facilisis gravida neque convallis a cras semper. Malesuada fames ac turpis egestas integer eget aliquet nibh. Ultrices vitae auctor eu augue. Arcu non odio euismod lacinia at quis risus sed vulputate.', photo: '', pricing: 300, capacity: 500, amenities: '', availability: '', category: 'Mansion', size: 4000, cancellation: '', security_deposit: '', accessibility: '')
+
+clubhouse = Venue.create(vendor_id: 4, title: 'County Club Ballroom', location: 'Westchester, NY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem integer vitae justo eget magna fermentum. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Arcu bibendum at varius vel pharetra vel turpis nunc. Diam donec adipiscing tristique risus nec. Egestas erat imperdiet sed euismod nisi. Volutpat est velit egestas dui id. Elementum sagittis vitae et leo duis ut. In est ante in nibh mauris.', photo: '', pricing: 280, capacity: 300, amenities: '', availability: '', category: 'Clubhouse', size: 3000, cancellation: '', security_deposit: '', accessibility: '')
+
+ranch = Venue.create(vendor_id: 4, title: 'Expansive, Secluded Ranch', location: 'Carmel, NY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus. Ornare arcu odio ut sem nulla pharetra. Sed egestas egestas fringilla phasellus faucibus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Urna duis convallis convallis tellus id interdum. At tellus at urna condimentum mattis pellentesque id nibh.', photo: '', pricing: 200, capacity: 300, amenities: '', availability: '', category: 'Ranch', size: 3000, cancellation: '', security_deposit: '', accessibility: '')
+
+castle = Venue.create(vendor_id: 5, title: 'Castle', location: 'Castle Hill, NY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus. Ornare arcu odio ut sem nulla pharetra. Sed egestas egestas fringilla phasellus faucibus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Urna duis convallis convallis tellus id interdum. At tellus at urna condimentum mattis pellentesque id nibh.', photo: '', pricing: 700, capacity: 350, amenities: '', availability: '', category: 'Castle', size: 3000, cancellation: '', security_deposit: '', accessibility: '')
