@@ -13,18 +13,18 @@ class Api::V1::VenuesController < ApplicationController
   def get_venue_details
     favs = params[:favorites]
     all_fav_ids = favs.map {|fav| fav[:venue_id]}
-
-
-    user_faved_venues = all_fav_ids.map do |fav_id|
+    @user_faved_venues = all_fav_ids.map do |fav_id|
       Venue.all.select {|venue| venue.id == fav_id }
     end
 
-    @user_faved_venues_unique = user_faved_venues.uniq
-    render json: {user_fav_venues: @user_faved_venues_unique}, status: 200
+    render json: {user_fav_venues: @user_faved_venues}, status: 200
   end
 
-  def see_user_venue_favs
-    render json: {user_fav_venues: @user_faved_venues_unique}, status: 200
-  end
+  # def see_user_venue_favs
+  #   render json: {user_fav_venues: @user_faved_venues_unique}, status: 200
+  # end
+
+
+
 
 end

@@ -10,4 +10,10 @@ class Api::V1::FavoritesController < ApplicationController
     render json: @favorite, status: 201
   end
 
+  def delete
+    favorite = Favorite.find(params["favoriteId"])
+    favorite.destroy
+    render json: favorite, status: 200
+  end
+
 end

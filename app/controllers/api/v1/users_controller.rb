@@ -12,9 +12,9 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     @user = User.find_by(user_params)
-    # byebug
-    render json: @user, status: 200
+    render json: @user.to_json(:include => {:favorites => {:include => :venue}, :reservations => {:include => :venue}}), status: 200
   end
+
 
   private
   def user_params
