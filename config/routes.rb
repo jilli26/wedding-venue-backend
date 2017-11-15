@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get '/venues/:id', to: 'venues#show'
       post '/user_favs', to: 'venues#get_venue_details'
       # get '/user_favs', to:'venues#see_user_venue_favs'
+      post '/venues/categories', to: 'venues#find_categories'
+      post '/venues/capacity', to: 'venues#find_capacity'
 
       post '/favorites', to: 'favorites#create'
       get '/favorites', to: 'favorites#index'

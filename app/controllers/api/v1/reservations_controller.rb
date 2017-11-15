@@ -6,7 +6,10 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def create
-    reservation = Reservation.create(user_id: params[:userId], venue_id: params[:venueId], start: params[:date])
+    # user_id = params['reservation']['userId']
+    # venue_id = params['reservation']['venueId'].to_i
+    # start = params['reservation']['date']
+    reservation = Reservation.create(reservation_params)
     render json: reservation, status: 201
   end
 
@@ -34,7 +37,7 @@ class Api::V1::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:id, :user_id, :venue_id, :start, :end, :booker_name)
+    params.require(:reservation).permit(:id, :user_id, :venue_id, :start, :end)
   end
 
 

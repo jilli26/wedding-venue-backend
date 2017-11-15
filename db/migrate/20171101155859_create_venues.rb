@@ -1,9 +1,10 @@
 class CreateVenues < ActiveRecord::Migration[5.1]
   def change
     create_table :venues do |t|
-      t.integer :vendor_id 
+      t.integer :vendor_id
       t.string :title
-      t.string :location
+      t.string :city
+      t.string :state
       t.string :description
       t.string :photo
       t.integer :pricing
