@@ -1,5 +1,5 @@
 class VenueSerializer < ActiveModel::Serializer
-  attributes :id, :title, :city, :state, :description, :photo, :pricing, :capacity, :amenities, :availability, :category, :size, :cancellation, :security_deposit, :accessibility, :lat, :lng
+  attributes :id, :title, :city, :state, :description, :photo, :pricing, :capacity, :amenities, :availability, :category, :size, :cancellation, :security_deposit, :accessibility, :lat, :lng, :phone, :address, :ratings
 
   belongs_to :vendor
   has_many :favorites

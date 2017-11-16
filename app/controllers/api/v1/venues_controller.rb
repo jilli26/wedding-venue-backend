@@ -25,9 +25,17 @@ class Api::V1::VenuesController < ApplicationController
   # end
 
   def find_categories
+    # byebug
 
     user_requested_categories = params["categories"].split(',')
-    location = params["location"][0]
+
+    if params["location"].is_a?Array
+      location = params['location'][0]
+    else
+      location = params['location']
+    end
+
+    # byebug
 
     @selected_venues = []
 
@@ -43,6 +51,13 @@ class Api::V1::VenuesController < ApplicationController
 
   def find_capacity
     # byebug
+
+    # location = params["location"]
+    if params["location"].is_a?Array
+      location = params['location'][0]
+    else
+      location = params['location']
+    end
 
     if params["capacity"].length > 0
       first = params["capacity"].split(',')[0].split('-')[0].to_i #100
@@ -72,18 +87,18 @@ class Api::V1::VenuesController < ApplicationController
       @venues_with_selected_capacity = []
 
       Venue.all.each do |venue|
-        if first_range.include?(venue.capacity)
+        if first_range.include?(venue.capacity) && venue.state == location
           @venues_with_selected_capacity << venue
         elsif second_range
-          if second_range.include?(venue.capacity)
+          if second_range.include?(venue.capacity) && venue.state == location
             @venues_with_selected_capacity << venue
           end
         elsif third_range
-          if third_range.include?(venue.capacity)
+          if third_range.include?(venue.capacity) && venue.state == location
             @venues_with_selected_capacity << venue
           end
         elsif fourth_range
-          if fourth_range.include?(venue.capacity)
+          if fourth_range.include?(venue.capacity) && venue.state == location
             @venues_with_selected_capacity << venue
           end
         end
