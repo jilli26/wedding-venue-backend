@@ -20,12 +20,7 @@ class Api::V1::VenuesController < ApplicationController
     render json: {user_fav_venues: @user_faved_venues}, status: 200
   end
 
-  # def see_user_venue_favs
-  #   render json: {user_fav_venues: @user_faved_venues_unique}, status: 200
-  # end
-
   def find_categories
-    # byebug
 
     user_requested_categories = params["categories"].split(',')
 
@@ -34,8 +29,6 @@ class Api::V1::VenuesController < ApplicationController
     else
       location = params['location']
     end
-
-    # byebug
 
     @selected_venues = []
 
@@ -50,9 +43,7 @@ class Api::V1::VenuesController < ApplicationController
   end
 
   def find_capacity
-    # byebug
 
-    # location = params["location"]
     if params["location"].is_a?Array
       location = params['location'][0]
     else
@@ -105,7 +96,7 @@ class Api::V1::VenuesController < ApplicationController
         @venues_with_selected_capacity
       end
     end
-    # byebug
+
     render json: {venues_with_selected_capacity: @venues_with_selected_capacity}, status: 200
   end
 
